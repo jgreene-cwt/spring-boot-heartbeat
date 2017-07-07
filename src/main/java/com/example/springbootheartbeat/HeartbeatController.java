@@ -23,8 +23,8 @@ public class HeartbeatController
     @RequestMapping(value = "/greeting/{name}", method = RequestMethod.GET)
     public String heartbeat(@PathVariable String name)
     {
-        return String.format(template, name);
-        //return this.getCurrentDateTimeStamp() + ": " + String.format(template, name);        
+        //return String.format(template, name);
+        return this.getCurrentDateTimeStamp() + ": " + String.format(template, name);        
     }
     
     private String getCurrentDateTimeStamp()
